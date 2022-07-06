@@ -77,7 +77,7 @@ function App() {
 				<h3>grocery bud </h3>
 				<div className="form-control">
 					<input type="text" className="grocery" placeholder="item" value={itemName} onChange={(e) => setItemName(e.currentTarget.value)} />
-					{isEditBtnClicked ? (
+					{isEditBtnClicked && itemLists.length !== 0 ? (
 						<button className="update-btn" id={objOfTheItemToBeUpdated.id} onClick={updateEditedItem}>
 							update
 						</button>
